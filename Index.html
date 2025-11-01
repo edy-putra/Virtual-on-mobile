@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On Gratis</title>
+    <meta name="theme-color" content="#6366f1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Virtual Try-On</h1>
+            <p>Bikin konten affiliate realistis 100% gratis!</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box" id="productUpload">
+                <span>📦 Upload Produk</span>
+                <input type="file" accept="image/*" hidden>
+            </div>
+            
+            <div class="upload-box" id="modelUpload">
+                <span>👤 Upload Model</span>
+                <input type="file" accept="image/*" hidden>
+            </div>
+        </div>
+
+        <button id="processBtn" disabled>
+            🔥 Generate Try-On
+        </button>
+
+        <div class="result-section">
+            <canvas id="resultCanvas"></canvas>
+            <button id="downloadBtn" style="display:none;">
+                💾 Download Hasil
+            </button>
+        </div>
+
+        <div class="loading" id="loading" style="display:none;">
+            ⏳ Processing...
+        </div>
+    </div>
+
+    <!-- Load AI Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js" crossorigin="anonymous"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
